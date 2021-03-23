@@ -1,0 +1,10 @@
+<configuration>
+    <!--数据库连接信息-->
+    <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+    <property name="jdbcUrl" value="jdbc:mysql://192.168.241.129:3306/customize_mybatis"/>
+    <property name="username" value="mybatis"/>
+    <property name="password" value="Mybatis@1234"/>
+    <!--引⼊sql配置信息-->
+    <mapper resource="mapper.xml"/>
+    <mapper resource="UserMapper.xml"/>
+</configuration>

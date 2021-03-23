@@ -1,0 +1,16 @@
+<!--namespace是命名空间，和sql的id作为sql执行数据的唯一Id-->
+<mapper namespace="com.jamie.mybatis.achieve.test.dao.IUserDao">
+    <!--id是相同命名空间下的唯一Id，用于找到需要执行的sql
+    parameterType是入参的对象类型，用于匹配字段名拿到需要填充的条件
+    resultType是返参的对象类型，返回时对象转换
+    -->
+    <select id="findByCondition" parameterType="com.jamie.mybatis.achieve.test.pojo.User"
+            resultType="com.jamie.mybatis.achieve.test.pojo.User">
+        select * from user where id = #{id} and username =#{username}
+    </select>
+
+    <select id="findAll"
+            resultType="com.jamie.mybatis.achieve.test.pojo.User">
+        select * from user
+    </select>
+</mapper>
