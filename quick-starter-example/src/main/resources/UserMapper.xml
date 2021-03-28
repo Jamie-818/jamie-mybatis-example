@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.jamie.mybatis.example.dao.IUserDao">
+<mapper namespace="com.jamie.quickStarter.example.dao.IUserDao">
     <!--namespace : 名称空间：与id组成sql的唯一标识
         resultType： 表明返回值类型-->
 

@@ -12,7 +12,7 @@
         <!--给单独的实体起别名-->
         <!--  <typeAlias type="com.lagou.pojo.User" alias="user"></typeAlias>-->
         <!--批量起别名：该包下所有的类的本身的类名：别名还不区分大小写-->
-        <package name="com.jamie.mybatis.example.pojo"/>
+        <package name="com.jamie.quickStarter.example.pojo"/>
     </typeAliases>
 
     <!--environments:运行环境-->

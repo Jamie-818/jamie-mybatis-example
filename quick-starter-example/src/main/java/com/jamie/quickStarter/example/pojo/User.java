@@ -1,4 +1,4 @@
-package com.jamie.mybatis.example.pojo;
+package com.jamie.quickStarter.example.pojo;
 
 /**
  * 用户类

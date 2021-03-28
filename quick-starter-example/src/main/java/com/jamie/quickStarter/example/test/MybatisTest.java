@@ -1,7 +1,7 @@
-package com.jamie.mybatis.example.test;
+package com.jamie.quickStarter.example.test;
 
-import com.jamie.mybatis.example.dao.IUserDao;
-import com.jamie.mybatis.example.pojo.User;
+import com.jamie.quickStarter.example.dao.IUserDao;
+import com.jamie.quickStarter.example.pojo.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -39,7 +39,7 @@ public class MybatisTest {
         // 在进行增删改操作时，要手动提交事务
         SqlSession sqlSession = sqlSessionFactory.openSession();
         //4.sqlSession调用方法：查询所有selectList  查询单个：selectOne 添加：insert  修改：update 删除：delete
-        List<User> users = sqlSession.selectList("com.jamie.mybatis.example.dao.IUserDao.findAll");
+        List<User> users = sqlSession.selectList("com.jamie.quickStarter.example.dao.IUserDao.findAll");
         for(User user: users){
             System.out.println(user);
         }
@@ -54,7 +54,7 @@ public class MybatisTest {
         User user = new User();
         user.setId(6);
         user.setUsername("tom");
-        sqlSession.insert("com.jamie.mybatis.example.dao.IUserDao.saveUser", user);
+        sqlSession.insert("com.jamie.quickStarter.example.dao.IUserDao.saveUser", user);
         sqlSession.close();
     }
 
@@ -65,7 +65,7 @@ public class MybatisTest {
         User user = new User();
         user.setId(6);
         user.setUsername("lucy");
-        sqlSession.update("com.jamie.mybatis.example.dao.IUserDao.updateUser", user);
+        sqlSession.update("com.jamie.quickStarter.example.dao.IUserDao.updateUser", user);
         sqlSession.commit();
 
         sqlSession.close();
@@ -75,7 +75,7 @@ public class MybatisTest {
     public void delete() {
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
-        sqlSession.delete("com.jamie.mybatis.example.dao.IUserDao.deleteUser", 6);
+        sqlSession.delete("com.jamie.quickStarter.example.dao.IUserDao.deleteUser", 6);
         sqlSession.commit();
 
         sqlSession.close();

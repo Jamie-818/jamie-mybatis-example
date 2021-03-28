@@ -1,6 +1,6 @@
-package com.jamie.mybatis.example.dao;
+package com.jamie.quickStarter.example.dao;
 
-import com.jamie.mybatis.example.pojo.User;
+import com.jamie.quickStarter.example.pojo.User;
 
 import java.io.IOException;
 import java.util.List;
